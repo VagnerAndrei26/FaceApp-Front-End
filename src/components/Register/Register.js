@@ -25,7 +25,7 @@ class Register extends Component {
 
 	validateEmail = (mail) => 
 	{
-	 if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))
+	 if (/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))
 	  {
 	    return (true)
 	  }
@@ -34,7 +34,7 @@ class Register extends Component {
 	}
 
 	onSubmitRegister = () => {
-		fetch('https://immense-oasis-52449.herokuapp.com/register', {
+		fetch('https://shrouded-sierra-76795.herokuapp.com/register', {
 			method: 'post',
 			headers: {'Content-Type': 'application/json'},
 			body: JSON.stringify({

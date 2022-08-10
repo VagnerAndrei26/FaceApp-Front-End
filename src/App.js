@@ -68,7 +68,6 @@ class App extends Component {
       }
     })
   }
-
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
     const image = document.getElementById('inputimage');
@@ -92,7 +91,7 @@ class App extends Component {
 
   onPictureSubmit = () => {
     this.setState({imageUrl: this.state.input});
-      fetch('https://immense-oasis-52449.herokuapp.com/imageurl', {
+      fetch('https://secret-oasis-18197.herokuapp.com/imageurl', {
           method: 'post',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
@@ -102,7 +101,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
       if (response) {
-        fetch('https://immense-oasis-52449.herokuapp.com/image', {
+        fetch('https://secret-oasis-18197.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
