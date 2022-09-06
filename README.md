@@ -3,3 +3,7 @@
 3) Npm start
 
 Link to the deployed app https://face-ai-front-end.herokuapp.com/
+
+Register or log in with:
+email: andrei@gmail.com
+password:andrei
